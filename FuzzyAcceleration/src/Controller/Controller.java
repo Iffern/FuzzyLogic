@@ -42,4 +42,8 @@ public class Controller {
         System.out.println("Controlled car speed: "+controlledCar.getSpeed()+" Automatic car speed: "+automaticCar.getSpeed()
         +" Distance between cars: "+controlledCar.getDistanceFromCarAhead()+" Rainfall: "+weather.getCurrentRainfall());
     }
+
+    public double getControlledCarSpeedInMS() {
+        return automaticCar.speedInMS();
+    }
 }

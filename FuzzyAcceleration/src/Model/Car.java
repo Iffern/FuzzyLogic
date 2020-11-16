@@ -14,4 +14,6 @@ public abstract class Car {
     double accelerationInKMH2(double accelerationInMS2){
         return accelerationInMS2*Math.pow(3600,2)/1000;
     }
+
+    public double speedInMS(){ return speed*1000./3600;}
 }

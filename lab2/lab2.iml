@@ -7,7 +7,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="jFuzzyLogic" level="project" />
-    <orderEntry type="library" name="eu.hansolo:Medusa:11.5" level="project" />
+    <orderEntry type="library" name="jFuzzyLogic_1_2_1" level="project" />
   </component>
 </module>
