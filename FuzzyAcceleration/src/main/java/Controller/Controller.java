@@ -50,4 +50,12 @@ public class Controller {
     public Weather getWeather() {
         return weather;
     }
+
+    public AutomaticCar getAutomaticCar() {
+        return automaticCar;
+    }
+
+    public ControlledCar getControlledCar() {
+        return controlledCar;
+    }
 }

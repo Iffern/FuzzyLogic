@@ -4,12 +4,11 @@ import Controller.Controller;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class Board<WetaherVisualisation> extends JPanel {
+public class Board extends JPanel {
     private final int WIDTH = 1000;
     private final int HEIGHT = 600;
     final static int CAR_WIDTH = 100;
@@ -58,6 +57,7 @@ public class Board<WetaherVisualisation> extends JPanel {
     }
 
     private void drawObjects(Graphics g) {
+        weather.drawWeather(g, this, controller.getWeather().getCurrentRainfall());
         trees.drawTrees(g,this);
         road.paintRoad(g,this);
         Image grass = new ImageIcon("resources/grass.png").getImage();
