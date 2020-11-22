@@ -4,12 +4,13 @@ plugins {
 
 group 'org.example'
 version '1.0-SNAPSHOT'
-
 repositories {
     mavenCentral()
 }
-task run{
+ext {
+    javaMainClass = "Main"
 }
 dependencies {
     compile 'eu.hansolo:Medusa:11.5'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
 }
