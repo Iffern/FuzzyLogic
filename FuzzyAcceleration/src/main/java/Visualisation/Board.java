@@ -9,11 +9,11 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Board extends JPanel {
+    private SideBoard sideBoard;
     private final int WIDTH = 1000;
     private final int HEIGHT = 600;
     final static int CAR_WIDTH = 100;
     final static int CAR_HEIGHT = 70;
-    private final int NUM_OF_ITERATIONS = 100;
     private Thread animator;
     Controller controller;
     private boolean isAnimated = false;
@@ -25,7 +25,8 @@ public class Board extends JPanel {
     Road road = new Road(WIDTH);
     WeatherVisualisation weather = new WeatherVisualisation();
 
-    public Board(Controller controller) {
+    public Board(Controller controller, SideBoard sideBoard) {
+        this.sideBoard = sideBoard;
         setBackground(Color.BLACK);
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
         this.controller = controller;
@@ -91,6 +92,7 @@ public class Board extends JPanel {
             isAnimated = true;
             condition.signalAll();
         }
+        sideBoard.repaint();
         lock.unlock();
     }
 

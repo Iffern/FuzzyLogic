@@ -9,7 +9,7 @@ public class Controller {
     ControlledCar controlledCar;
     AutomaticCar automaticCar;
     Weather weather;
-    FuzzyController fuzzyController;
+    public FuzzyController fuzzyController;
     int accelerationFlag=0;
 
     public Controller(String fuzzyFile){
@@ -20,10 +20,10 @@ public class Controller {
     }
 
     public void iterate(){
-        printStatus();
+        //printStatus();
         double speedChange = fuzzyController.getSpeedChange(controlledCar.getSpeed(),
                 controlledCar.getDistanceFromCarAhead(), weather.getCurrentRainfall());
-        System.out.println(speedChange);
+        //System.out.println(speedChange);
         controlledCar.changeSpeedAndDistance(speedChange,1,automaticCar.getSpeed(),automaticCar.getAcceleration());
         automaticCar.changeSpeed(1);
         if(accelerationFlag==0){
@@ -31,7 +31,7 @@ public class Controller {
             weather.setRandomWeather();
         }
         accelerationFlag = (accelerationFlag+1)%4;
-        printStatus();
+        //printStatus();
     }
 
     public int getDistanceBetweenCars(){
@@ -49,13 +49,5 @@ public class Controller {
 
     public Weather getWeather() {
         return weather;
-    }
-
-    public AutomaticCar getAutomaticCar() {
-        return automaticCar;
-    }
-
-    public ControlledCar getControlledCar() {
-        return controlledCar;
     }
 }

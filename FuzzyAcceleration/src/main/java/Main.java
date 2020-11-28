@@ -1,5 +1,6 @@
 import Controller.Controller;
 import Visualisation.CarAnimation;
+import net.sourceforge.jFuzzyLogic.plot.JFuzzyChart;
 
 import javax.swing.*;
 import java.awt.*;

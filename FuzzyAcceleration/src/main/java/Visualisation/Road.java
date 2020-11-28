@@ -25,10 +25,10 @@ public class Road{
 
     public void moveRoad(double interval){
         x1 = (int) Math.floor(x1-interval);
-        if(x1<-width) x1 = width-1;
+        if(x1<-width) x1 = width+2;
         x2 = (int) Math.floor(x2-interval);
-        if(x2<-width) x2 = width-1;
+        if(x2<-width) x2 = width;
         x3 = (int) Math.floor(x3-interval);
-        if(x3<-width) x3 = width-1;
+        if(x3<-width) x3 = width-2;
     }
 }

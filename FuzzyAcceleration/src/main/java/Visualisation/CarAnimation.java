@@ -6,7 +6,12 @@ import Controller.Controller;
 public class CarAnimation extends JFrame {
 
     public CarAnimation(Controller controller){
-        add(new Board(controller));
+        JPanel container = new JPanel();
+        container.setLayout(new BoxLayout(container, BoxLayout.X_AXIS));
+        SideBoard sideBoard = new SideBoard(controller);
+        container.add(new Board(controller, sideBoard));
+        container.add(sideBoard);
+        add(container);
         setResizable(false);
         pack();
 
