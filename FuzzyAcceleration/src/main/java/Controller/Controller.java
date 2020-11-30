@@ -13,8 +13,8 @@ public class Controller {
     int accelerationFlag=0;
 
     public Controller(String fuzzyFile){
-        this.controlledCar = new ControlledCar(50,20);
-        this.automaticCar = new AutomaticCar(50);
+        this.controlledCar = new ControlledCar(0,50);
+        this.automaticCar = new AutomaticCar(0);
         this.weather = new Weather();
         this.fuzzyController = new FuzzyController(fuzzyFile);
     }
@@ -22,7 +22,7 @@ public class Controller {
     public void iterate(){
         //printStatus();
         double speedChange = fuzzyController.getSpeedChange(controlledCar.getSpeed(),
-                controlledCar.getDistanceFromCarAhead(), weather.getCurrentRainfall());
+                       controlledCar.getDistanceFromCarAhead(), weather.getCurrentRainfall());
         //System.out.println(speedChange);
         controlledCar.changeSpeedAndDistance(speedChange,1,automaticCar.getSpeed(),automaticCar.getAcceleration());
         automaticCar.changeSpeed(1);
@@ -50,4 +50,8 @@ public class Controller {
     public Weather getWeather() {
         return weather;
     }
+
+    public int getRedCarSpeedKMH(){ return this.controlledCar.getSpeed();}
+
+    public int getYellowCarSpeedKMH(){ return this.automaticCar.getSpeed();}
 }

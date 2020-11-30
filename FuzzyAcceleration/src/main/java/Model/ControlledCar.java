@@ -14,9 +14,12 @@ public class ControlledCar extends Car{
     }
 
     public void changeSpeedAndDistance(double accelerationInMS2, int seconds, int carAheadSpeed, double carAheadAccelerationInMS2) {
+        System.out.println(accelerationInMS2+" "+speed+" "+carAheadAccelerationInMS2+" "+carAheadSpeed+" "+distanceFromCarAhead);
         speed += accelerationInKMH2(accelerationInMS2)*seconds/3600;
-        distanceFromCarAhead += (carAheadSpeed - this.speed)*1000*seconds/3600 +
-                (carAheadAccelerationInMS2-accelerationInMS2)*Math.pow(seconds,2)/2;
+        if(this.speed>0){
+            distanceFromCarAhead += (carAheadSpeed - this.speed)*1000*seconds/3600 +
+                    (carAheadAccelerationInMS2-accelerationInMS2)*Math.pow(seconds,2)/2;
+        }
         if(speed>maximumSpeed) speed=maximumSpeed;
         if(speed<=0) speed=0;
     }

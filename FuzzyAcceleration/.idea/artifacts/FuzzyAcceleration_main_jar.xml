@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FuzzyAcceleration.main:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/FuzzyAcceleration_main_jar</output-path>
+    <root id="archive" name="FuzzyAcceleration.main.jar">
+      <element id="module-output" name="FuzzyAcceleration.main" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../java libraries/jFuzzyLogic.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

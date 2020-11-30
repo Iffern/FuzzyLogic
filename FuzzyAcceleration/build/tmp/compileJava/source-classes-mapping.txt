@@ -1,0 +1,34 @@
+Visualisation/ParametersVisualisation.java
+ Visualisation.ParametersVisualisation
+Visualisation/Road.java
+ Visualisation.Road
+Model/Weather.java
+ Model.Weather
+Visualisation/Tree.java
+ Visualisation.Tree
+Model/FuzzyController.java
+ Model.FuzzyController
+Model/AutomaticCar.java
+ Model.AutomaticCar
+Model/Car.java
+ Model.Car
+Visualisation/CarVisualisation.java
+ Visualisation.CarVisualisation
+Visualisation/WeatherVisualisation.java
+ Visualisation.WeatherVisualisation
+Model/ControlledCar.java
+ Model.ControlledCar
+Controller/Controller.java
+ Controller.Controller
+Main.java
+ Main
+Visualisation/Board.java
+ Visualisation.Board
+Visualisation/SideBoard.java
+ Visualisation.SideBoard
+Visualisation/Iterator.java
+ Visualisation.Iterator
+Visualisation/Animator.java
+ Visualisation.Animator
+Visualisation/CarAnimation.java
+ Visualisation.CarAnimation

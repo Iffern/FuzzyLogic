@@ -24,6 +24,7 @@ public class Board extends JPanel {
     Tree trees = new Tree();
     Road road = new Road(WIDTH);
     WeatherVisualisation weather = new WeatherVisualisation();
+    ParametersVisualisation parameters = new ParametersVisualisation();
 
     public Board(Controller controller, SideBoard sideBoard) {
         this.sideBoard = sideBoard;
@@ -47,9 +48,6 @@ public class Board extends JPanel {
         return WIDTH / 2 + controller.getDistanceBetweenCars();
     }
 
-    private void loadImages() {
-
-    }
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -59,6 +57,8 @@ public class Board extends JPanel {
 
     private void drawObjects(Graphics g) {
         weather.drawWeather(g, this, controller.getWeather().getCurrentRainfall());
+        parameters.drawSpeed(g, this, controller.getRedCarSpeedKMH(), controller.getYellowCarSpeedKMH());
+        parameters.drawDistance(g, this, controller.getDistanceBetweenCars());
         trees.drawTrees(g,this);
         road.paintRoad(g,this);
         Image grass = new ImageIcon("resources/grass.png").getImage();
