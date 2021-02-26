@@ -11,4 +11,6 @@ and in the process of fuzzyfication the acceleration was calculated.
 Sensor simulation was also made, in which two cars were created: one controlled by the sensor, and the second one, which acceleration was randomize.
 The simulation also includes changing weather conditions.
 
+Program is written in Java, using library JFuzzyLogic (http://jfuzzylogic.sourceforge.net/)
 
+![Alt text](https://github.com/Iffern/FuzzyLogic/blob/main/FuzzyAcceleration/resources/app.png?raw=true "Simulation screenshot")
